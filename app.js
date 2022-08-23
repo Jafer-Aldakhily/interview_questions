@@ -112,6 +112,9 @@ console.log(notMatchedResults);
 
 // Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 
+
+
+
 const reversedString = (string) => {
     const newArray = string.split("")
     const reverseArray = []
@@ -138,10 +141,10 @@ console.log(reversedString(string))
 const isNum = (string) => {
     expr = /\d/
     const result = expr.test(string) ? true : false
-    console.log(result);
+    return result
 }
 
-isNum("hello3")
+console.log(isNum("hello3"))
 
 
 
@@ -166,12 +169,12 @@ isNum("hello3")
 
 // If the user enters any of these four inputs, return true. For any other input, return false.
 
-const gameFunction = (string) => {
+const matchMonth = (string) => {
     const expr = /\bOctober|Oct\b/i
     const result = expr.test(string)
     return result
 
 }
 
-// let input = prompt("In which month is Halloween")
-// console.log(gameFunction(input))
+let input = prompt("In which month is Halloween")
+console.log(matchMonth(input))
